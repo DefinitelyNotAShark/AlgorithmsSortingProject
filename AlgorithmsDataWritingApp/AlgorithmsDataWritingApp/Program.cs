@@ -13,7 +13,7 @@ namespace AlgorithmsDataWritingApp
 
         static void Main(string[] args)
         {
-            string path = @"c:\workspace\sk-es.csv";//this is where our text file is going to be created and what it's going to be called
+            string path = @"C:\Users\Sophie\Documents\Visual Studio 2017\sk-es.csv";//this is where our text file is going to be created and what it's going to be called
 
             using (StreamWriter sw = File.CreateText(path))
             {

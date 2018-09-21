@@ -8,25 +8,27 @@ namespace AlgorithmsDataSortingApp
 {
     class SortByDouble
     {
-        void BubbleSortDoubles(double[] doubles)
-        {
-            double tempDouble;
 
-            for (int write = 0; write < doubles.Length; write++)
+        public List<Tuple<int, Guid, double>> doubleBubbleSorted(List<Tuple<int, Guid, double>> list)//takes in the unsorted list and returns the sorted list
+        {
+            Tuple<int, Guid, double> tempList;
+            
+            for(int i = 0; i < list.Count; i++)
             {
-                for(int sort = 0; sort < doubles.Length - 1; sort++)
+                for(int a = i + 1; a < list.Count; a++)
                 {
-                    if(doubles[sort] > doubles[sort + 1])
+                    if(list[i].Item3 > list[a].Item3)//item 3 refers to the 3rd object in the tuple
                     {
-                        tempDouble = doubles[sort + 1];
-                        doubles[sort + 1] = doubles[sort];
-                        doubles[sort] = tempDouble;
+                        tempList = list[i];
+                        list[i] = list[a];
+                        list[a] = tempList;
                     }
                 }
             }
+            return list;
         }
 
-        void BucketSortDoubles()
+        void doubleBucketSorted(List<Tuple<int, Guid, double>> list)
         {
 
         }
