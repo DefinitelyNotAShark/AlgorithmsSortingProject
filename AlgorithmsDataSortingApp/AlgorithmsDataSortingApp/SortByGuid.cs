@@ -16,7 +16,7 @@ namespace AlgorithmsDataSortingApp
             {
                 for (int a = i + 1; a < list.Count; a++)
                 {
-                   // if (list[i].Item2 > list[a].Item2)//convert to number
+                    // if (list[i].Item2 > list[a].Item2)//convert to number
                     //{
                     //    tempList = list[i];
                     //    list[i] = list[a];

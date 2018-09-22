@@ -39,8 +39,7 @@ namespace AlgorithmsDataSortingApp
 
 
 
-            //List<Tuple<int, Guid, double>> doubleSortedList = dSort.doubleBubbleSorted(dataLine);//create our double sorted list
-            //writer.CreateNewTextFile(doubleSortedList, "debugSortByDouble");
+            writer.CreateNewTextFile(doubleSortedList, "debugSortByDouble");
             Console.Read();
         }
     }
