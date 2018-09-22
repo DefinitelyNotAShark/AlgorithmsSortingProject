@@ -11,7 +11,7 @@ namespace AlgorithmsDataSortingApp
     {
         public string path(string fileName)
         {
-            return @"C:\Users\Sophie\Documents\Visual Studio 2017\" + fileName + ".csv";
+            return @"C:\Users\Evan Sucher\Desktop\School\SENIOR YEAR\Algorithms\" + fileName + ".csv"; //YOU WILL HAVE TO CHANGE THIS LINE
         }
 
         public void CreateNewTextFile(List<Tuple<int, Guid, double>> listToWrite, string filePath)//takes in the list and the string of the path
