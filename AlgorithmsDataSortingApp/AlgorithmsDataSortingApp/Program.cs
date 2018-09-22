@@ -33,8 +33,14 @@ namespace AlgorithmsDataSortingApp
             SortByDouble dSort = new SortByDouble();//create our sort class objects
             DataWriter writer = new DataWriter();
 
-            List<Tuple<int, Guid, double>> doubleSortedList = dSort.doubleBubbleSorted(dataLine);//create our double sorted list
-            writer.CreateNewTextFile(doubleSortedList, "debugSortByDouble");
+
+            List<Tuple<int, Guid, double>> doubleSortedList = dataLine;
+            dSort.doubleQuicktSorted(doubleSortedList, 0, dataLine.Count - 1);//this is our quick sort function we call and now double sorted list is sorted!
+
+
+
+            //List<Tuple<int, Guid, double>> doubleSortedList = dSort.doubleBubbleSorted(dataLine);//create our double sorted list
+            //writer.CreateNewTextFile(doubleSortedList, "debugSortByDouble");
             Console.Read();
         }
     }

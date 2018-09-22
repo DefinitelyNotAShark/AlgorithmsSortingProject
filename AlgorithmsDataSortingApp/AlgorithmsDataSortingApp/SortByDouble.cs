@@ -27,10 +27,55 @@ namespace AlgorithmsDataSortingApp
             }
             return list;
         }
+        //https://www.w3resource.com/csharp-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-9.php
+        //quick sort link
 
-        void doubleBucketSorted(List<Tuple<int, Guid, double>> list)
+        public void doubleQuicktSorted(List<Tuple<int, Guid, double>> list, int left, int right)
         {
+            if(left < right)
+            {
+                int pivot = Partition(list, left, right);
 
+                if(pivot > 1)
+                {
+                    doubleQuicktSorted(list, left, pivot - 1);//recursion, bitch
+                }
+                if(pivot + 1 < right)
+                {
+                    doubleQuicktSorted(list, pivot + 1, right);
+                }
+            }
+        }
+
+        public int Partition(List<Tuple<int, Guid, double>> list, int left, int right)
+        {
+            var pivot = list[left].Item3;
+
+            while (true)
+            {
+                while (list[left].Item3 < pivot)
+                {
+                    left++;
+                }
+                while (list[right].Item3 > pivot)
+                {
+                    right--;
+                }
+                if (left < right)
+                {
+                    if (list[left].Item3 == list[right].Item3)
+                    {
+                        return right;
+                    }
+                    Tuple<int, Guid, double> tempList = list[left];
+                    list[left] = list[right];
+                    list[right] = tempList;
+                }
+                else
+                {
+                    return right;
+                }
+            }
         }
     }
 }
