@@ -38,11 +38,15 @@ namespace AlgorithmsDataSortingApp
 
             List<Tuple<int, Guid, double>> doubleSortedList = dataLine;
             dSort.doubleQuicktSorted(doubleSortedList, 0, dataLine.Count - 1);//this is our quick sort function we call and now double sorted list is sorted!
-            writer.CreateNewTextFile(doubleSortedList, "debugSortByDouble");
+            writer.CreateNewTextFile(doubleSortedList, "debugSortByDouble");  //This creates the file for the doublesorted List
 
             List<Tuple<int, Guid, double>> IDSortedList = dataLine;
             iSort.IDQuickSorted(IDSortedList, 0, dataLine.Count - 1);//this is our quick sort function for int/ID
-            writer.CreateNewTextFile(IDSortedList, "debugSortByID");
+            writer.CreateNewTextFile(IDSortedList, "debugSortByID"); //This creates the file for the ID sorted List
+
+            List<Tuple<int, Guid, double>> guidSortedList = dataLine;
+            gSort.GuidQuickSorted(guidSortedList, 0, dataLine.Count - 1);//this is our quick sort function for GUID
+            writer.CreateNewTextFile(guidSortedList, "debugSortByGuid"); //This creates the file for the GUID sorted List
 
             Console.Read();
         }
