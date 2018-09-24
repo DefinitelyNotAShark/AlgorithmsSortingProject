@@ -15,7 +15,7 @@ namespace AlgorithmsDataSortingApp
             List<Tuple<int, Guid, double>> dataLine = new List<Tuple<int, Guid, double>>();
 
             DataWriter writer = new DataWriter();
-            string dataFileName = "RandomDataSet";
+            string dataFileName = "ARLG";
 
             Console.WriteLine("Random Data Set Sorting: Sophia Kneznekoff and Evan Sucher\n");
             Console.WriteLine("Files Created in Path: /AlgorithmsDataSortingApp/bin/Debug/\n");
@@ -24,7 +24,7 @@ namespace AlgorithmsDataSortingApp
             Stopwatch stopWatch = new Stopwatch(); // Stopwatch, Timespan, and any other time keeping parts of the code were borrowed from
             stopWatch.Start();                     // https://docs.microsoft.com/en-us/dotnet/api/system.diagnostics.stopwatch.elapsed?view=netframework-4.7.2
 
-            writer.CreateRandomDataSet(dataFileName); //This creates the data set of 1,000,000 elements
+            //writer.CreateRandomDataSet(dataFileName); //This creates the data set of 1,000,000 elements
 
             stopWatch.Stop();
             // Get the elapsed time as a TimeSpan value.
@@ -149,8 +149,8 @@ namespace AlgorithmsDataSortingApp
             stopWatch.Reset();
             stopWatch.Start();
 
-            //List<Tuple<int, Guid, double>> IDBubbleSortedList = iSort.IDBubbleSorted(dataLine);
-            writer.CreateNewTextFile(IDQuickSortedList, "BubbleSortByID"); //This creates the file for the Id sorted List
+            List<Tuple<int, Guid, double>> IDBubbleSortedList = iSort.IDBubbleSorted(dataLine);
+            writer.CreateNewTextFile(IDBubbleSortedList, "BubbleSortByID"); //This creates the file for the Id sorted List
 
             stopWatch.Stop();
             // Get the elapsed time as a TimeSpan value.

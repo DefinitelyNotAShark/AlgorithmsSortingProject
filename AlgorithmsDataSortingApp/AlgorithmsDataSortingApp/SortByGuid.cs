@@ -12,9 +12,9 @@ namespace AlgorithmsDataSortingApp
         {
             Tuple<int, Guid, double> tempList;
 
-            for (int i = 0; i < list.Count; i++)
+            for (int i = 0; i < 1000; i++)
             {
-                for (int a = i + 1; a < list.Count; a++)
+                for (int a = i + 1; a < 1000; a++)
                 {
                     if (GuidToDouble(list[i].Item2) > GuidToDouble(list[a].Item2))//item 2 refers to the 3rd object in the tuple
                     {
